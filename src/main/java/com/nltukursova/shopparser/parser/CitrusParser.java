@@ -17,7 +17,7 @@ public class CitrusParser implements Parser {
 
     @Override
     public LaptopDTO getLaptop(String laptopName) {
-        Document htmlPage = readPage(laptopName);
+        Document htmlPage = getPage(laptopName);
         LaptopDTO laptopDTO = parsePageByFields(htmlPage);
         return laptopDTO;
     }
@@ -56,7 +56,7 @@ public class CitrusParser implements Parser {
     }
 
     @Override
-    public Document readPage(String laptopName) {
+    public Document getPage(String laptopName) {
         Document doc = null;
         String query = "https://www.citrus.ua/search?query=" + laptopName + "&categories=96";
         try {

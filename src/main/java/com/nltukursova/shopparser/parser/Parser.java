@@ -4,7 +4,7 @@ import com.nltukursova.shopparser.dto.LaptopDTO;
 import org.jsoup.nodes.Document;
 
 public interface Parser {
-    Document readPage(String laptopName);
+    Document getPage(String laptopName);
 
     LaptopDTO getLaptop(String name);
 
