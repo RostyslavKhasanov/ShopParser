@@ -1,6 +1,6 @@
 package com.nltukursova.shopparser.parser;
 
-import com.nltukursova.shopparser.dto.LaptopDTO;
+import com.nltukursova.shopparser.domain.LaptopDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
@@ -45,8 +45,17 @@ public class AlloParser implements Parser {
             log.info("Allo name: " + name);
 
             //get price
-            String price = itemList.first().selectFirst("div.price-box").select("span.sum").text()
+            String priceOld = itemList.first().selectFirst("div.price-box").select("span.sum").text()
                     .replaceAll("\\s+", "");
+            String priceNew = itemList.first().selectFirst("div.price-box").select("span.new_sum").text()
+                    .replaceAll("\\s+", "");
+
+            String price;
+            if (priceOld.isEmpty()) {
+                price = priceNew;
+            } else {
+                price = priceOld;
+            }
             log.info("Allo price " + price);
 
             //get url to the product in the shop
@@ -67,6 +76,6 @@ public class AlloParser implements Parser {
 
     public static void main(String[] args) {
         AlloParser alloParser = new AlloParser();
-        System.out.println(alloParser.getLaptop("dell"));
+        System.out.println(alloParser.getLaptop("mac"));
     }
 }

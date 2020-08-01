@@ -1,6 +1,6 @@
 package com.nltukursova.shopparser.parser;
 
-import com.nltukursova.shopparser.dto.LaptopDTO;
+import com.nltukursova.shopparser.domain.LaptopDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
