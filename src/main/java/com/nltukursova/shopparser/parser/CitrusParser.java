@@ -1,6 +1,6 @@
 package com.nltukursova.shopparser.parser;
 
-import com.nltukursova.shopparser.dto.LaptopDTO;
+import com.nltukursova.shopparser.domain.LaptopDTO;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
@@ -17,7 +17,7 @@ public class CitrusParser implements Parser {
 
     @Override
     public LaptopDTO getLaptop(String laptopName) {
-        Document htmlPage = readPage(laptopName);
+        Document htmlPage = getPage(laptopName);
         LaptopDTO laptopDTO = parsePageByFields(htmlPage);
         return laptopDTO;
     }
@@ -56,7 +56,7 @@ public class CitrusParser implements Parser {
     }
 
     @Override
-    public Document readPage(String laptopName) {
+    public Document getPage(String laptopName) {
         Document doc = null;
         String query = "https://www.citrus.ua/search?query=" + laptopName + "&categories=96";
         try {

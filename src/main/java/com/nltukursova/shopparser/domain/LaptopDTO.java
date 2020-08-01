@@ -1,4 +1,4 @@
-package com.nltukursova.shopparser.dto;
+package com.nltukursova.shopparser.domain;
 
 import lombok.Data;
 

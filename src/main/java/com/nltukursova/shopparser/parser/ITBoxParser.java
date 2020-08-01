@@ -1,6 +1,6 @@
 package com.nltukursova.shopparser.parser;
 
-import com.nltukursova.shopparser.dto.LaptopDTO;
+import com.nltukursova.shopparser.domain.LaptopDTO;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -17,7 +17,7 @@ public class ITBoxParser implements Parser {
     private static final Logger log = LogManager.getLogger(ITBoxParser.class);
 
     @Override
-    public Document readPage(String laptopName) {
+    public Document getPage(String laptopName) {
         Document doc = null;
         String query = "https://www.itbox.ua/search/category/Noutbuki-c4093/?Search=" + laptopName;
         try {
@@ -30,7 +30,7 @@ public class ITBoxParser implements Parser {
 
     @Override
     public LaptopDTO getLaptop(String name) {
-        Document htmlPage = readPage(name);
+        Document htmlPage = getPage(name);
         LaptopDTO laptopDTO = parsePageByFields(htmlPage);
         return laptopDTO;
     }
