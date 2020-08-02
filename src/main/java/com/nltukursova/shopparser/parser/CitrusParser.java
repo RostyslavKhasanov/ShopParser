@@ -66,9 +66,4 @@ public class CitrusParser implements Parser {
         }
         return doc;
     }
-
-    public static void main(String[] args) {
-        CitrusParser rozetkaParser = new CitrusParser();
-        System.out.println(rozetkaParser.getLaptop("Mac"));
-    }
 }

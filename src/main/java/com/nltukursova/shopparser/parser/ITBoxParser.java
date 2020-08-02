@@ -10,7 +10,6 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-@Log4j2
 public class ITBoxParser implements Parser {
 
     private static final String SHOP_URL = "https://www.itbox.ua";
@@ -63,10 +62,5 @@ public class ITBoxParser implements Parser {
             log.info("ITBox returned null for product");
             return null;
         }
-    }
-
-    public static void main(String[] args) {
-        ITBoxParser rozetkaParser = new ITBoxParser();
-        System.out.println(rozetkaParser.getLaptop("dell"));
     }
 }

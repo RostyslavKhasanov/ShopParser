@@ -73,9 +73,4 @@ public class AlloParser implements Parser {
             return null;
         }
     }
-
-    public static void main(String[] args) {
-        AlloParser alloParser = new AlloParser();
-        System.out.println(alloParser.getLaptop("mac"));
-    }
 }
