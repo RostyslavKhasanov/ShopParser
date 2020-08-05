@@ -1,6 +1,8 @@
 package com.nltukursova.shopparser.service;
 
+import java.util.List;
+
 public interface LaptopService {
 
-    String getLaptopsName(String name);
+    List<String> getLaptopsName(String name);
 }

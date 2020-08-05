@@ -65,17 +65,12 @@ public class AlloParser implements Parser {
             log.info("Allo laptopUrl " + laptopUrl);
 
             //need to realize
-            String shopImage = "";
+            String shopImage = "https://marsgroup.com.ua/local/image/003/000/allo.png";
 
             return new LaptopDTO().buildDto(name, laptopUrl, price, SHOP_URL, shopImage);
         } catch (NullPointerException npe) {
             log.info("Allo returned null for product");
             return null;
         }
-    }
-
-    public static void main(String[] args) {
-        AlloParser alloParser = new AlloParser();
-        System.out.println(alloParser.getLaptop("mac"));
     }
 }

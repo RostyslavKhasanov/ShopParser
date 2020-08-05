@@ -1,7 +1,6 @@
 package com.nltukursova.shopparser.parser;
 
 import com.nltukursova.shopparser.domain.LaptopDTO;
-import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
@@ -10,7 +9,6 @@ import org.jsoup.select.Elements;
 
 import java.io.IOException;
 
-@Log4j2
 public class ITBoxParser implements Parser {
 
     private static final String SHOP_URL = "https://www.itbox.ua";
@@ -56,17 +54,12 @@ public class ITBoxParser implements Parser {
             log.info("ITBox laptopUrl " + laptopUrl);
 
             //need to realize
-            String shopImage = "";
+            String shopImage = "https://pbs.twimg.com/profile_images/1359417366/logonew2_400x400.png";
 
             return new LaptopDTO().buildDto(name, laptopUrl, price, SHOP_URL, shopImage);
         } catch (NullPointerException npe) {
             log.info("ITBox returned null for product");
             return null;
         }
-    }
-
-    public static void main(String[] args) {
-        ITBoxParser rozetkaParser = new ITBoxParser();
-        System.out.println(rozetkaParser.getLaptop("dell"));
     }
 }
