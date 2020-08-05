@@ -16,10 +16,15 @@ public class CitrusParser implements Parser {
     private static final Logger log = LogManager.getLogger(CitrusParser.class.getName());
 
     @Override
-    public LaptopDTO getLaptop(String laptopName) {
-        Document htmlPage = getPage(laptopName);
-        LaptopDTO laptopDTO = parsePageByFields(htmlPage);
-        return laptopDTO;
+    public Document getPage(String laptopName) {
+        Document doc = null;
+        String query = "https://www.citrus.ua/search?query=" + laptopName + "&categories=96";
+        try {
+            doc = Jsoup.connect(query).get();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return doc;
     }
 
     @Override
@@ -45,8 +50,8 @@ public class CitrusParser implements Parser {
             String laptopUrl = foundedLaptop.selectFirst("a.card-product-link").attr("href");
             log.info("Citrus laptopUrl " + laptopUrl);
 
-            //need to realize
-            String shopImage = "";
+            //shop image url hardcoded
+            String shopImage = "https://upload.wikimedia.org/wikipedia/commons/6/67/Logotip-Citrus_1.png";
 
             return new LaptopDTO().buildDto(name, laptopUrl, price, SHOP_URL, shopImage);
         } catch (NullPointerException npe) {
@@ -56,14 +61,11 @@ public class CitrusParser implements Parser {
     }
 
     @Override
-    public Document getPage(String laptopName) {
-        Document doc = null;
-        String query = "https://www.citrus.ua/search?query=" + laptopName + "&categories=96";
-        try {
-            doc = Jsoup.connect(query).get();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return doc;
+    public LaptopDTO getLaptop(String laptopName) {
+        Document htmlPage = getPage(laptopName);
+        LaptopDTO laptopDTO = parsePageByFields(htmlPage);
+        return laptopDTO;
     }
+
+
 }

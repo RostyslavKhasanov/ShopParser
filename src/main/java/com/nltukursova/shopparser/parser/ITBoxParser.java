@@ -1,7 +1,6 @@
 package com.nltukursova.shopparser.parser;
 
 import com.nltukursova.shopparser.domain.LaptopDTO;
-import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.jsoup.Jsoup;
@@ -55,7 +54,7 @@ public class ITBoxParser implements Parser {
             log.info("ITBox laptopUrl " + laptopUrl);
 
             //need to realize
-            String shopImage = "";
+            String shopImage = "https://pbs.twimg.com/profile_images/1359417366/logonew2_400x400.png";
 
             return new LaptopDTO().buildDto(name, laptopUrl, price, SHOP_URL, shopImage);
         } catch (NullPointerException npe) {
