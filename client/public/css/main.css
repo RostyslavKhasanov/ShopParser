@@ -1,0 +1,416 @@
+/* Styles for wrapping the search box */
+
+.main {
+    width: 50%;
+    margin: 50px auto;
+}
+
+/* Bootstrap 4 text input with search icon */
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+#games-tabel {
+    margin-top: 200px;
+}
+
+.col_white_amrc {
+    color: #e9ecef;
+}
+
+.bg-light {
+    background-color: #e9ecef !important;
+}
+
+footer {
+    width: 100%;
+    background-color: #e9ecef;
+    height: 129px;
+    padding: 10px 0px 25px 0px;
+    position: absolute;
+}
+
+.user-footer {
+    width: 100%;
+    background-color: #e9ecef;
+    height: 120px;
+    padding: 0px 0px 25px 0px;
+    position: fixed;
+    bottom: 0;
+}
+
+#main-footer {
+    width: 100%;
+    background-color: #e9ecef;
+    height: 120px;
+    padding: 0px 0px 25px 0px;
+    position: absolute;
+    bottom: 0;
+}
+
+.contact-footer {
+    width: 100%;
+    background-color: #e9ecef;
+    height: 120px;
+    padding: 0px 0px 25px 0px;
+    position: fixed;
+    bottom: 0;
+}
+
+.pt2 {
+    padding-top: 40px;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 13px;
+    color: #7b8590;
+    padding-bottom: 0px;
+    margin-bottom: 8px;
+}
+
+.order-footer p {
+    font-size: 14px;
+    color: #7b8590;
+}
+
+.footer_ul_amrc {
+    margin: 0px;
+    list-style-type: none;
+    font-size: 14px;
+    padding: 0px 0px 10px 0px;
+}
+
+.footer_ul_amrc li {
+    padding: 0px 0px 5px 0px;
+}
+
+.footer_ul_amrc li a {
+    color: #7b8590;
+}
+
+.footer_ul_amrc li a:hover {
+    color: #7b8590;
+    text-decoration: none;
+}
+
+.fleft {
+    float: left;
+}
+
+.padding-right {
+    padding-right: 10px;
+}
+
+.footer_ul2_amrc {
+    margin: 0px;
+    list-style-type: none;
+    padding: 0px;
+}
+
+.footer_ul2_amrc li p {
+    display: table;
+}
+
+.footer_ul2_amrc li a:hover {
+    text-decoration: none;
+}
+
+.footer_ul2_amrc li i {
+    margin-top: 5px;
+}
+
+.bottom_border {
+    border-bottom: 1px solid #323f45;
+    padding-bottom: 20px;
+}
+
+.foote_bottom_ul_amrc {
+    display: table;
+    margin-top: 5px;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-left: auto;
+}
+
+.foote_bottom_ul_amrc li {
+    display: inline;
+}
+
+.foote_bottom_ul_amrc li a {
+    color: #7b8590;
+    margin: 0 15px;
+}
+
+.social_footer_ul {
+    display: table;
+    margin: auto auto auto auto;
+    list-style-type: none;
+}
+
+.social_footer_ul li {
+    padding-left: 20px;
+    padding-top: 5px;
+    float: left;
+}
+
+.social_footer_ul li a {
+    color: #7b8590;
+    border: 1px solid #7b8590;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.social_footer_ul li i {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+.custom {
+    width: 200px !important;
+}
+
+#sideBarContent {
+    background-color: antiquewhite;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    margin-bottom: 10px;
+}
+
+#Content {
+    background-color: antiquewhite;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.game-container {
+    width: 28%;
+    margin: 0 1% 50px;
+    text-align: center;
+    background-color: #eababa52;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.game-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: deepskyblue;
+}
+
+.game-img {
+    width: 100%;
+    margin: 5px 0;
+}
+
+#gameProfileContainer {
+    background-color: blanchedalmond;
+    border-radius: 10px;
+    margin-bottom: 98px;
+}
+
+#gameProfile {
+    margin-top: 75px;
+}
+
+#gameDescription: {}
+
+#gameImage {
+    border-radius: 10px;
+}
+
+#gameOrderImage {
+    border-radius: 10px;
+    width: 260px;
+    height: 150px;
+}
+
+#gameBuy {
+    margin-left: 29%;
+    align-content: center;
+}
+
+#buyButton {
+    width: 60%;
+}
+
+#user-container {
+    padding: 2%;
+    border-radius: 10px;
+    margin-bottom: 9%;
+}
+
+#userProfile {
+    justify-content: center;
+    background-color: antiquewhite;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+#userInfo {
+    background-color: antiquewhite;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#changePhoto {}
+
+.btn-file {
+    position: relative;
+    overflow: hidden;
+    background-color: #007bff;
+}
+
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: blue;
+    cursor: inherit;
+    display: block;
+}
+
+.col-lg-4 {
+    margin-left: 400px;
+}
+
+#signin {}
+
+.orders-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    position: relative;
+    padding-bottom: 120px;
+}
+
+.card {
+    margin: -5px 10px 10px 53px;
+    
+}
+
+.wrapper {
+    margin: 60px auto;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 1.25em;
+}
+
+/*Specific styling*/
+#content {
+    padding: 15px;
+    border: solid 1px #eee;
+    max-width: 660px;
+    margin: auto;
+    border-radius: 4px;
+}
+
+#gamesTable {
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+#change-password {}
+
+#change-username {}
+
+#changePhotoSpan {}
+
+@media (max-width: 767px) {
+
+    /*xs*/
+    .btn {
+        padding: 1px 5px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+
+    .createFont {
+        font-size: 7px;
+    }
+
+    .fontEmail {
+        font-size: 11px;
+        font-weight: bolder;
+    }
+
+    .badge-light {
+        font-size: 10px;
+    }
+    #dropdownProfile {
+        width: 77;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+    /*sm*/
+    .btn {
+        padding: 5px 10px;
+        font-size: 12px;
+        line-height: 1.5;
+        border-radius: 3px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    /*md*/
+    .btn {
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        border-radius: 4px;
+    }
+}
+
+.centerBlock {
+    display: table;
+    margin: auto;
+}
+
+#feedbackBody {
+    background-color: beige;
+    border-radius: 10px;
+    margin-bottom: 1%;
+}
+
+#feedbackPhoto {
+    padding-top: 0.25%;
+}
