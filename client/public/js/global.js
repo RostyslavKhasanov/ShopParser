@@ -39,7 +39,7 @@ function getLaptops() {
                         `
  <tr>
                                 <td>
-                                    <a href=""><img src="${value.shopImage}" alt="" width="100" height="50"></a>
+                                    <a href="${value.url}"><img src="${value.shopImage}" alt="" width="100" height="50"></a>
                                 </td>
                                 <td >
                                     <h6>${value.name}</h6>
