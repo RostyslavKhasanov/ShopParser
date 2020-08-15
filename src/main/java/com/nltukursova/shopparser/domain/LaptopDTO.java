@@ -3,7 +3,7 @@ package com.nltukursova.shopparser.domain;
 import lombok.Data;
 
 @Data
-public class LaptopDTO {
+public class LaptopDTO implements Comparable<LaptopDTO> {
     private String name;
     private String url;
     private Double price;
@@ -18,5 +18,16 @@ public class LaptopDTO {
         this.shopUrl = shopUrl;
         this.shopImage = shopImage;
         return this;
+    }
+
+    @Override
+    public int compareTo(LaptopDTO o) {
+        if (price > o.getPrice()) {
+            return 1;
+        } else if (price.equals(o.getPrice())) {
+            return 0;
+        } else {
+            return -1;
+        }
     }
 }
