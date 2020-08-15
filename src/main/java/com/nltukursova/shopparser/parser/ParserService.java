@@ -26,7 +26,8 @@ public class ParserService {
                 laptopDTOS.add(laptopDTO);
             }
         }
-        laptopDTOS = laptopDTOS.stream().filter(x -> x.getName().contains(name)).collect(Collectors.toList());
+
+        laptopDTOS = laptopDTOS.stream().filter(x -> x.getName().contains(name)).sorted().collect(Collectors.toList());
         return laptopDTOS;
     }
 }
